@@ -148,6 +148,30 @@
       }
     }
   },
+  "table-row-hover-color": {
+    "component": "table",
+    "value": "{gray-900}"
+  },
+  "table-row-hover-opacity": {
+    "component": "table",
+    "value": "0.07"
+  },
+  "table-selected-row-background-color": {
+    "component": "table",
+    "value": "{informative-background-color-default}"
+  },
+  "table-selected-row-background-opacity": {
+    "component": "table",
+    "value": "0.1"
+  },
+  "table-selected-row-background-color-non-emphasized": {
+    "component": "table",
+    "value": "{neutral-background-color-selected-default}"
+  },
+  "table-selected-row-background-opacity-non-emphasized": {
+    "component": "table",
+    "value": "0.1"
+  },
   "floating-action-button-shadow-color": {
     "component": "floating-action-button",
     "value": "{transparent-black-300}"
