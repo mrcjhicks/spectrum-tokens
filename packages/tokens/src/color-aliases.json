@@ -267,6 +267,9 @@
       }
     }
   },
+  "neutral-subdued-content-color-selected": {
+    "value": "{neutral-subdued-content-color-down}"
+  },
   "accent-background-color-default": {
     "sets": {
       "light": {
@@ -330,6 +333,9 @@
         "value": "{accent-color-1000}"
       }
     }
+  },
+  "accent-content-color-selected": {
+    "value": "{accent-content-color-down}"
   },
   "informative-background-color-default": {
     "sets": {
