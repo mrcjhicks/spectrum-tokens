@@ -2,4 +2,4 @@
 "@adobe/spectrum-tokens": minor
 ---
 
-Added tokens for in-field-button
+New tokens for in-field button

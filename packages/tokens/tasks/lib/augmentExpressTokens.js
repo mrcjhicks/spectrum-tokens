@@ -18,7 +18,7 @@ const deprecationObj = {
 
 const findExpressValue = (tokenObj) => {
   if (typeof tokenObj === "object" && tokenObj !== null) {
-    if (tokenObj.hasOwnProperty("value")) {
+    if (Object.hasOwn(tokenObj, "value")) {
       return {
         ...tokenObj,
         ...deprecationObj,
