@@ -94,11 +94,9 @@ function calculatePossibleRenames(diffResult, oldTokens, newTokens) {
 function logResultCategory(diffResult, categoryKey, msg) {
   const results = diffResult[categoryKey];
   const resultCount = Object.keys(results).length;
-  if (!msg) {
-    msg = `Tokens ${categoryKey}`;
-  }
+  const message = msg || `Tokens ${categoryKey}`;
   if (resultCount > 0) {
-    console.log(`\n*${msg} (${resultCount}):*`);
+    console.log(`\n*${message} (${resultCount}):*`);
     switch (categoryKey) {
       case "possiblyRenamed":
         Object.keys(results)

@@ -14,12 +14,12 @@ import test from "ava";
 import { readFile } from "fs/promises";
 
 const getValue = (obj, setName) => {
-  if (obj.hasOwnProperty("value")) {
+  if (Object.hasOwn(obj, "value")) {
     return obj.value;
-  } else if (obj.hasOwnProperty("sets")) {
-    if (obj.sets.hasOwnProperty(setName)) {
+  } else if (Object.hasOwn(obj, "sets")) {
+    if (Object.hasOwn(obj.sets, setName)) {
       return getValue(obj.sets[setName], setName);
-    } else if (obj.sets.hasOwnProperty("spectrum")) {
+    } else if (Object.hasOwn(obj.sets, "spectrum")) {
       return getValue(obj.sets.spectrum, setName);
     }
   }

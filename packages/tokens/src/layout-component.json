@@ -3815,5 +3815,151 @@
         "value": "5px"
       }
     }
+  },
+  "in-field-button-width-stacked-small": {
+    "component": "in-field-button",
+    "value": "20px"
+  },
+  "in-field-button-width-stacked-medium": {
+    "component": "in-field-button",
+    "value": "28px"
+  },
+  "in-field-button-width-stacked-large": {
+    "component": "in-field-button",
+    "value": "36px"
+  },
+  "in-field-button-width-stacked-extra-large": {
+    "component": "in-field-button",
+    "value": "44px"
+  },
+  "in-field-button-fill-stacked-inner-border-rounding": {
+    "component": "in-field-button",
+    "sets": {
+      "spectrum": {
+        "value": "0px"
+      },
+      "express": {
+        "value": "1px"
+      }
+    }
+  },
+  "in-field-button-edge-to-fill": {
+    "component": "in-field-button",
+    "sets": {
+      "spectrum": {
+        "value": "0px"
+      },
+      "express": {
+        "value": "4px"
+      }
+    }
+  },
+  "in-field-button-stacked-inner-edge-to-fill": {
+    "component": "in-field-button",
+    "sets": {
+      "spectrum": {
+        "value": "0px"
+      },
+      "express": {
+        "value": "1px"
+      }
+    }
+  },
+  "in-field-button-edge-to-disclosure-icon-stacked-small": {
+    "component": "in-field-button",
+    "value": "7px"
+  },
+  "in-field-button-edge-to-disclosure-icon-stacked-medium": {
+    "component": "in-field-button",
+    "value": "9px"
+  },
+  "in-field-button-edge-to-disclosure-icon-stacked-large": {
+    "component": "in-field-button",
+    "value": "13px"
+  },
+  "in-field-button-edge-to-disclosure-icon-stacked-extra-large": {
+    "component": "in-field-button",
+    "value": "16px"
+  },
+  "in-field-button-outer-edge-to-disclosure-icon-stacked-small": {
+    "component": "in-field-button",
+    "value": "3px"
+  },
+  "in-field-button-outer-edge-to-disclosure-icon-stacked-medium": {
+    "component": "in-field-button",
+    "sets": {
+      "spectrum": {
+        "value": "3px"
+      },
+      "express": {
+        "value": "5px"
+      }
+    }
+  },
+  "in-field-button-outer-edge-to-disclosure-icon-stacked-large": {
+    "component": "in-field-button",
+    "sets": {
+      "spectrum": {
+        "value": "4px"
+      },
+      "express": {
+        "value": "7px"
+      }
+    }
+  },
+  "in-field-button-outer-edge-to-disclosure-icon-stacked-extra-large": {
+    "component": "in-field-button",
+    "sets": {
+      "spectrum": {
+        "value": "5px"
+      },
+      "express": {
+        "value": "8px"
+      }
+    }
+  },
+  "in-field-button-inner-edge-to-disclosure-icon-stacked-small": {
+    "component": "in-field-button",
+    "sets": {
+      "spectrum": {
+        "value": "{in-field-button-outer-edge-to-disclosure-icon-stacked-small}"
+      },
+      "express": {
+        "value": "1px"
+      }
+    }
+  },
+  "in-field-button-inner-edge-to-disclosure-icon-stacked-medium": {
+    "component": "in-field-button",
+    "sets": {
+      "spectrum": {
+        "value": "{in-field-button-outer-edge-to-disclosure-icon-stacked-medium}"
+      },
+      "express": {
+        "value": "1px"
+      }
+    }
+  },
+  "in-field-button-inner-edge-to-disclosure-icon-stacked-large": {
+    "component": "in-field-button",
+    "sets": {
+      "spectrum": {
+        "value": "{in-field-button-outer-edge-to-disclosure-icon-stacked-large}"
+      },
+      "express": {
+        "value": "3px"
+      }
+    }
+  },
+  "in-field-button-inner-edge-to-disclosure-icon-stacked-extra-large": {
+    "component": "in-field-button",
+    "sets": {
+      "spectrum": {
+        "value": "{in-field-button-outer-edge-to-disclosure-icon-stacked-extra-large}"
+      },
+      "express": {
+        "value": "4px"
+      }
+    }
   }
 }
