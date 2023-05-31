@@ -1,5 +1,11 @@
 # @adobe/spectrum-tokens
 
+## 0.0.0-uuid-20230531214940
+
+### Minor Changes
+
+- Added UUIDs to each token
+
 ## 12.9.0
 
 ### Minor Changes
