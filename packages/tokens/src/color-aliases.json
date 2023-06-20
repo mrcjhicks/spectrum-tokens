@@ -332,7 +332,8 @@
     }
   },
   "neutral-subdued-content-color-selected": {
-    "value": "{neutral-subdued-content-color-down}"
+    "value": "{neutral-subdued-content-color-down}",
+    "uuid": "fac088c0-6ba7-4179-915a-bb5432fe0320"
   },
   "accent-background-color-default": {
     "sets": {
@@ -415,7 +416,8 @@
     }
   },
   "accent-content-color-selected": {
-    "value": "{accent-content-color-down}"
+    "value": "{accent-content-color-down}",
+    "uuid": "9e944400-600d-477e-8b08-7069adf6fbb7"
   },
   "informative-background-color-default": {
     "sets": {
