@@ -1,5 +1,11 @@
 # @adobe/spectrum-tokens
 
+## 12.13.0-beta.0
+
+### Minor Changes
+
+- 27a9c28: Added table tokens
+
 ## 12.12.1
 
 ### Patch Changes
