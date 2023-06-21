@@ -1,6 +1,6 @@
 {
   "name": "@adobe/spectrum-tokens",
-  "version": "0.0.0-table-20230620222432",
+  "version": "0.0.0-table-20230621212504",
   "description": "Design tokens for Spectrum, Adobe's design system",
   "type": "module",
   "main": "tasks/buildSpectrumTokens.js",

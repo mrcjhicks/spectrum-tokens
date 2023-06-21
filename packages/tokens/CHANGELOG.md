@@ -1,5 +1,17 @@
 # @adobe/spectrum-tokens
 
+## 0.0.0-table-20230621212504
+
+### Minor Changes
+
+- Added missing table token
+
+  ## Token diff
+
+  _Tokens added (1):_
+
+  - `table-selected-row-background-opacity-hover`
+
 ## 0.0.0-table-20230620222432
 
 ### Minor Changes
