@@ -220,7 +220,8 @@
   },
   "table-selected-row-background-opacity-hover": {
     "component": "table",
-    "value": "0.15"
+    "value": "0.15",
+    "uuid": "ce2851bc-8ae1-4b27-8cd6-f191c9cd7fe9"
   },
   "table-selected-row-background-opacity-non-emphasized-hover": {
     "component": "table",
