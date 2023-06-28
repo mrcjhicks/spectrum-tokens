@@ -200,7 +200,7 @@
   },
   "table-selected-row-background-opacity": {
     "component": "table",
-    "value": "0.15",
+    "value": "0.1",
     "uuid": "61b3aa04-0e7e-44b8-a4c8-8442a4ebf549"
   },
   "table-selected-row-background-color-non-emphasized": {
