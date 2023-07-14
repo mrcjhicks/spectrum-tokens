@@ -997,11 +997,11 @@
     "component": "field-label",
     "sets": {
       "desktop": {
-        "value": "12px",
+        "value": "8px",
         "uuid": "eb2b857d-9482-42fb-82f9-bbe7899a22b9"
       },
       "mobile": {
-        "value": "15px",
+        "value": "11px",
         "uuid": "6f65ad1a-4a65-4b83-af44-5bd893f3b40e"
       }
     }
@@ -1010,11 +1010,11 @@
     "component": "field-label",
     "sets": {
       "desktop": {
-        "value": "15px",
+        "value": "11px",
         "uuid": "60caa810-5335-4c9f-95a7-0e60d49f43fc"
       },
       "mobile": {
-        "value": "19px",
+        "value": "14px",
         "uuid": "e410a804-2655-4bbc-9b66-53a5facc92ac"
       }
     }
@@ -1023,11 +1023,11 @@
     "component": "field-label",
     "sets": {
       "desktop": {
-        "value": "19px",
+        "value": "15px",
         "uuid": "e53ea4a5-bde5-4695-9ab8-50c2ce704019"
       },
       "mobile": {
-        "value": "24px",
+        "value": "18px",
         "uuid": "5227bf07-140a-49c6-88f9-cc454d8a90c1"
       }
     }
