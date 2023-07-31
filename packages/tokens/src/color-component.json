@@ -43,7 +43,7 @@
     "component": "opacity-checkerboard",
     "sets": {
       "light": {
-        "value": "{gray-200}",
+        "value": "{gray-100}",
         "uuid": "84a7cd5e-bb2b-4bb5-bb5f-f5839ae3a761"
       },
       "dark": {
@@ -108,7 +108,7 @@
   },
   "card-selection-background-color": {
     "component": "cards",
-    "value": "{gray-100}",
+    "value": "{gray-75}",
     "uuid": "622c6e86-dea6-416d-9f13-bb6ef112d3cb"
   },
   "card-selection-background-color-opacity": {
@@ -161,15 +161,8 @@
     "uuid": "0a0eff89-7e7d-4b7f-bcfa-a85e33e5798a"
   },
   "color-handle-drop-shadow-color": {
-    "component": "color-handle",
-    "deprecated": true,
-    "deprecated_comment": "Express does not need a separate design for Color loupe and Color handle components",
-    "sets": {
-      "express": {
-        "value": "{drop-shadow-color}",
-        "uuid": "97dfaf7f-ac2d-4517-84cc-6f692f712fc5"
-      }
-    }
+    "value": "{drop-shadow-color}",
+    "uuid": "97dfaf7f-ac2d-4517-84cc-6f692f712fc5"
   },
   "floating-action-button-drop-shadow-color": {
     "component": "floating-action-button",

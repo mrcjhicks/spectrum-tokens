@@ -58,19 +58,19 @@
   "background-base-color": {
     "sets": {
       "light": {
-        "value": "{gray-200}",
+        "value": "{gray-100}",
         "uuid": "e0d8739d-18dd-44bc-92ea-e443882a780b"
       },
       "dark": {
-        "value": "{gray-50}",
+        "value": "{gray-25}",
         "uuid": "46060531-9372-41a7-8db3-d3c100338e6d"
       },
       "darkest": {
-        "value": "{gray-50}",
+        "value": "{gray-25}",
         "uuid": "cf1299aa-86c7-4523-b6ae-6de597ac3712"
       },
       "wireframe": {
-        "value": "{gray-200}",
+        "value": "{gray-100}",
         "uuid": "6945b976-83b4-4aec-a687-cb461bc9fe70"
       }
     }
@@ -78,19 +78,19 @@
   "background-layer-1-color": {
     "sets": {
       "light": {
-        "value": "{gray-100}",
+        "value": "{gray-75}",
         "uuid": "7e6678b7-2903-434b-8ee2-06c83815b01d"
       },
       "dark": {
-        "value": "{gray-75}",
+        "value": "{gray-50}",
         "uuid": "fc1758f3-22bd-4dc0-9ef3-91fa0f454036"
       },
       "darkest": {
-        "value": "{gray-75}",
+        "value": "{gray-50}",
         "uuid": "da228344-5b83-4e08-96d2-089068138ba0"
       },
       "wireframe": {
-        "value": "{gray-100}",
+        "value": "{gray-75}",
         "uuid": "3ccfa493-5375-492a-93b0-7418655c3b56"
       }
     }
@@ -98,19 +98,19 @@
   "background-layer-2-color": {
     "sets": {
       "light": {
-        "value": "{gray-50}",
+        "value": "{gray-25}",
         "uuid": "b7b2bf98-b96a-40ca-b51e-5876d3418085"
       },
       "dark": {
-        "value": "{gray-100}",
+        "value": "{gray-75}",
         "uuid": "dd462fc7-bd79-4b52-9411-adf317832989"
       },
       "darkest": {
-        "value": "{gray-100}",
+        "value": "{gray-75}",
         "uuid": "e30b7936-6ae7-4ada-8892-94a1f67d55c9"
       },
       "wireframe": {
-        "value": "{gray-50}",
+        "value": "{gray-25}",
         "uuid": "6556a64d-5944-4d65-a6cc-9c6121044ac7"
       }
     }
@@ -142,11 +142,11 @@
         "uuid": "e0379e06-e2d3-4d6f-ba81-6cdf4012a022"
       },
       "dark": {
-        "value": "{gray-300}",
+        "value": "{gray-200}",
         "uuid": "7ea82825-f138-44e5-9c75-29c444086d6a"
       },
       "darkest": {
-        "value": "{gray-300}",
+        "value": "{gray-200}",
         "uuid": "0ce569ea-d735-42a3-96c2-60201fcb616f"
       },
       "wireframe": {
@@ -162,11 +162,11 @@
         "uuid": "5577ffde-5708-4ea7-a50d-d938f07eba7f"
       },
       "dark": {
-        "value": "{gray-200}",
+        "value": "{gray-100}",
         "uuid": "20e71891-57dc-4dc7-9f30-330d3753e8dd"
       },
       "darkest": {
-        "value": "{gray-200}",
+        "value": "{gray-100}",
         "uuid": "4901987b-b70c-42ef-92fd-b8c5b6894bfc"
       },
       "wireframe": {
@@ -182,11 +182,11 @@
         "uuid": "b8ba6d4d-737e-4c18-a901-bb35fdc173c3"
       },
       "dark": {
-        "value": "{gray-300}",
+        "value": "{gray-200}",
         "uuid": "78a08d31-921c-4b47-a50c-4f283e916712"
       },
       "darkest": {
-        "value": "{gray-300}",
+        "value": "{gray-200}",
         "uuid": "f90c1f60-5d23-41ed-ab42-30eeb9d079ba"
       },
       "wireframe": {
@@ -196,60 +196,20 @@
     }
   },
   "neutral-background-color-selected-default": {
-    "sets": {
-      "spectrum": {
-        "value": "{gray-700}",
-        "uuid": "fd1c9f2b-8358-4bd3-a5cc-d211673428bc"
-      },
-      "express": {
-        "value": "{gray-800}",
-        "deprecated": true,
-        "deprecated_comment": "Express will merge with Spectrum with the release of Spectrum 2.",
-        "uuid": "60caae29-d389-421e-a574-b26bcaeed3bf"
-      }
-    }
+    "value": "{gray-800}",
+    "uuid": "60caae29-d389-421e-a574-b26bcaeed3bf"
   },
   "neutral-background-color-selected-hover": {
-    "sets": {
-      "spectrum": {
-        "value": "{gray-800}",
-        "uuid": "1c220122-5f32-42f9-848f-ae10061241e5"
-      },
-      "express": {
-        "value": "{gray-900}",
-        "deprecated": true,
-        "deprecated_comment": "Express will merge with Spectrum with the release of Spectrum 2.",
-        "uuid": "0deac090-f00a-4927-880d-dfdca06bd66e"
-      }
-    }
+    "value": "{gray-900}",
+    "uuid": "0deac090-f00a-4927-880d-dfdca06bd66e"
   },
   "neutral-background-color-selected-down": {
-    "sets": {
-      "spectrum": {
-        "value": "{gray-900}",
-        "uuid": "966c56d0-4461-45e7-9e20-0277f2111a34"
-      },
-      "express": {
-        "value": "{gray-900}",
-        "deprecated": true,
-        "deprecated_comment": "Express will merge with Spectrum with the release of Spectrum 2.",
-        "uuid": "bf3de5f6-665c-4a6a-b238-e767b7240fd8"
-      }
-    }
+    "value": "{gray-900}",
+    "uuid": "bf3de5f6-665c-4a6a-b238-e767b7240fd8"
   },
   "neutral-background-color-selected-key-focus": {
-    "sets": {
-      "spectrum": {
-        "value": "{gray-800}",
-        "uuid": "9b8df7df-3439-4614-b446-97a4de782e27"
-      },
-      "express": {
-        "value": "{gray-900}",
-        "deprecated": true,
-        "deprecated_comment": "Express will merge with Spectrum with the release of Spectrum 2.",
-        "uuid": "e012e155-2220-43e9-a248-61c71e99cc2b"
-      }
-    }
+    "value": "{gray-900}",
+    "uuid": "e012e155-2220-43e9-a248-61c71e99cc2b"
   },
   "neutral-subdued-background-color-default": {
     "sets": {
@@ -278,11 +238,11 @@
         "uuid": "a1ab50d5-1aa1-4198-9510-7ea8458cc62f"
       },
       "dark": {
-        "value": "{gray-300}",
+        "value": "{gray-200}",
         "uuid": "338e2fda-0da2-4a52-b718-ca0ca50e88f9"
       },
       "darkest": {
-        "value": "{gray-300}",
+        "value": "{gray-200}",
         "uuid": "2d72c9fc-22d0-4e4d-9b00-fae4b30a47b5"
       },
       "wireframe": {
@@ -298,11 +258,11 @@
         "uuid": "300d2800-a6e5-4b78-9b6c-aaf2f4af39c6"
       },
       "dark": {
-        "value": "{gray-200}",
+        "value": "{gray-100}",
         "uuid": "6098f9a7-595e-488f-b44c-2b51a8924f90"
       },
       "darkest": {
-        "value": "{gray-200}",
+        "value": "{gray-100}",
         "uuid": "11bf9149-d8df-4f37-ba21-51ff911b0517"
       },
       "wireframe": {
@@ -318,11 +278,11 @@
         "uuid": "eece165c-743c-4d7a-b770-3ee50e1951cf"
       },
       "dark": {
-        "value": "{gray-300}",
+        "value": "{gray-200}",
         "uuid": "8f3f4b30-3887-4368-a38b-ec274eb99aa0"
       },
       "darkest": {
-        "value": "{gray-300}",
+        "value": "{gray-200}",
         "uuid": "a1e08db6-3a72-4b8e-9475-b54a7b9be506"
       },
       "wireframe": {
@@ -680,7 +640,7 @@
     }
   },
   "disabled-background-color": {
-    "value": "{gray-200}",
+    "value": "{gray-100}",
     "uuid": "a46de9d2-5c68-4a1e-97cd-7cbaf4038303"
   },
   "disabled-static-white-background-color": {
@@ -1472,7 +1432,7 @@
     }
   },
   "disabled-border-color": {
-    "value": "{gray-300}",
+    "value": "{gray-200}",
     "uuid": "474ae56c-709a-4f5a-a56b-62d01093f412"
   },
   "disabled-static-white-border-color": {
