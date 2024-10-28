@@ -1,0 +1,16 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "diff",
+			"problemMatcher": [],
+			"label": "npm: diff",
+			"detail": "moon diff:runcli",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
