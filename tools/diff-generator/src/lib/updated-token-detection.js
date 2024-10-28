@@ -11,6 +11,8 @@ governing permissions and limitations under the License.
 */
 import { detailedDiff } from "deep-object-diff";
 
+import { isBoolean, isNumber, isString } from "./helpers.js";
+
 /**
  * Detects updates made to tokens
  * @param {object} renamed - a list containing tokens that were renamed
@@ -156,23 +158,24 @@ function includeOldProperties(
       return;
     }
     if (
-      typeof curTokenLevel[property] === "string" ||
-      typeof curTokenLevel[property] === "number"
+      isString(curTokenLevel[property]) ||
+      isBoolean(curTokenLevel[property]) ||
+      isNumber(curTokenLevel[property])
     ) {
       const newValue = curTokenLevel[property];
       const path = !properties.includes(".")
         ? property
         : `${properties.substring(properties.indexOf(".") + 1)}.${property}`;
       curTokenLevel[property] = update
-        ? JSON.parse(`{ 
-        "new-value": "${newValue}",
-        "path": "${path}",
-        "original-value": "${curOriginalLevel[property]}"
-        }`)
-        : JSON.parse(`{ 
-          "new-value": "${newValue}",
-          "path": "${path}"
-          }`);
+        ? JSON.parse(`{
+            "path": "${path}",
+            "new-value": "${newValue}",
+            "original-value": "${curOriginalLevel[property]}"
+          }`)
+        : JSON.parse(`{
+              "path": "${path}",
+              "new-value": "${newValue}"
+            }`);
       return;
     }
     const nextProperties = properties + "." + property;
