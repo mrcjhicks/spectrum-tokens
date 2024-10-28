@@ -23,6 +23,6 @@ export default function storeOutput(filePath, output) {
     writeFileSync(filePath, output);
   } catch (error) {
     console.log("FAILED TO WRITE OUTPUT FILE: " + filePath);
-    console.log(error);
+    console.error(error);
   }
 }

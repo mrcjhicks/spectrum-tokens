@@ -70,8 +70,8 @@ export async function loadLocalData(dirName, tokenNames) {
           tokenNames,
         )
       : loadData(root.substring(0, root.lastIndexOf("/")) + "/", fileNames);
-  } catch (e) {
-    console.log(e);
+  } catch (error) {
+    console.error(error);
   }
 }
 
