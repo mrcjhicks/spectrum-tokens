@@ -144,9 +144,8 @@ export class CLIFormatter {
     log(
       this.indent(
         this.neutral(
-          EMOJI
-            ? emoji.emojify(`:${emojiName}: `)
-            : "" + `${title} (${numTokens})`,
+          (EMOJI ? emoji.emojify(`:${emojiName}: `) : "") +
+            `${title} (${numTokens})`,
         ),
         i,
       ),
