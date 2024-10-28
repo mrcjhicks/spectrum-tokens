@@ -35,10 +35,22 @@ export default async function fileImport(
   const result = {};
   const tokenNames =
     givenTokenNames ||
-    (await fetchTokens("manifest.json", version, location, givenRepo, githubAPIKey));
+    (await fetchTokens(
+      "manifest.json",
+      version,
+      location,
+      givenRepo,
+      githubAPIKey,
+    ));
   for (let i = 0; i < tokenNames.length; i++) {
     const name = givenTokenNames ? "src/" + tokenNames[i] : tokenNames[i];
-    const tokens = await fetchTokens(name, version, location, givenRepo, githubAPIKey);
+    const tokens = await fetchTokens(
+      name,
+      version,
+      location,
+      givenRepo,
+      githubAPIKey,
+    );
     Object.assign(result, tokens);
   }
   return result;
@@ -91,7 +103,7 @@ function getRootPath(startDir, targetDir) {
 }
 
 async function fetchTokens(tokenName, version, location, repo, githubAPIKey) {
-  const repoURL = source + (repo && repo.length ? repo :  defaultRepo);
+  const repoURL = source + (repo && repo.length ? repo : defaultRepo);
   const link = version !== "latest" ? repoURL + version : repoURL + location;
 
   const url = `${link}/packages/tokens/${tokenName}`;
