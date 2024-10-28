@@ -61,6 +61,7 @@ program
     "indicates specific tokens to compare",
   )
   .option("-l, --local <path>", "indicates to compare to local data")
+  .option("-r, --repo <name>", "github repository to target")
   .option("-gak, --githubAPIKey <key>", "github api key to use")
   .option("-f, --format <format>", "cli (default) or markdown")
   .option("-o, --output <path>", "file path to store diff output")
@@ -87,6 +88,7 @@ async function determineFiles(options) {
         options.tokenNames,
         options.newTokenVersion,
         options.newTokenBranch,
+        options.repo,
         gak,
       ),
     ]);
@@ -99,6 +101,7 @@ async function determineFiles(options) {
         options.tokenNames,
         options.oldTokenVersion,
         options.oldTokenBranch,
+        options.repo,
         gak,
       ),
       loadLocalData(options.local, options.tokenNames),
@@ -113,12 +116,14 @@ async function determineFiles(options) {
         options.tokenNames,
         options.oldTokenVersion,
         options.oldTokenBranch,
+        options.repo,
         gak,
       ),
       fileImport(
         options.tokenNames,
         options.newTokenVersion,
         options.newTokenBranch,
+        options.repo,
         gak,
       ),
     ]);
