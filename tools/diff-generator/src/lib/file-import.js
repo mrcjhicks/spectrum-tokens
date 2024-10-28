@@ -103,10 +103,11 @@ function getRootPath(startDir, targetDir) {
 }
 
 async function fetchTokens(tokenName, version, location, repo, githubAPIKey) {
-  const repoURL = source + (repo && repo.length ? repo : defaultRepo);
-  const link = version !== "latest" ? repoURL + version : repoURL + location;
+  const repoURL = source + "/" + (repo && repo.length ? repo : defaultRepo);
+  const link =
+    version !== "latest" ? repoURL + "/" + version : repoURL + "/" + location;
 
-  const url = `${link}/packages/tokens/${tokenName}`;
+  const url = `${link}/packages/tokens/${tokenName}`.replaceAll("//", "/");
   const result = await fetch(
     url,
     githubAPIKey && githubAPIKey.length
