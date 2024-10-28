@@ -12,7 +12,7 @@ governing permissions and limitations under the License.
 import { access, readFile } from "fs/promises";
 import { existsSync } from "fs";
 import path from "path";
-import { glob, globSync } from "glob";
+import { glob } from "glob";
 
 const source = "https://raw.githubusercontent.com/adobe/spectrum-tokens/";
 
@@ -26,15 +26,17 @@ export default async function fileImport(
   givenTokenNames,
   givenVersion,
   givenLocation,
+  githubAPIKey,
 ) {
   const version = givenVersion || "latest";
   const location = givenLocation || "main";
   const result = {};
   const tokenNames =
-    givenTokenNames || (await fetchTokens("manifest.json", version, location));
+    givenTokenNames ||
+    (await fetchTokens("manifest.json", version, location, githubAPIKey));
   for (let i = 0; i < tokenNames.length; i++) {
     const name = givenTokenNames ? "src/" + tokenNames[i] : tokenNames[i];
-    const tokens = await fetchTokens(name, version, location);
+    const tokens = await fetchTokens(name, version, location, githubAPIKey);
     Object.assign(result, tokens);
   }
   return result;
@@ -86,17 +88,31 @@ function getRootPath(startDir, targetDir) {
   }
 }
 
-async function fetchTokens(tokenName, version, location) {
-  const link =
-    version !== "latest"
-      ? source + version.replace("@", "%40")
-      : source + location;
-  return (await fetch(`${link}/packages/tokens/${tokenName}`))
-    .json()
-    .then((tokens) => {
-      return tokens;
-    })
-    .catch((e) => {
-      console.log(e);
-    });
+async function fetchTokens(tokenName, version, location, githubAPIKey) {
+  const link = version !== "latest" ? source + version : source + location;
+
+  const url = `${link}/packages/tokens/${tokenName}`;
+  const result = await fetch(
+    url,
+    githubAPIKey && githubAPIKey.length
+      ? {
+          headers: {
+            Authorization: "Bearer " + githubAPIKey, // api is rate limited without a personal access token
+          },
+        }
+      : {},
+  );
+
+  if (result && result.status === 200) {
+    return result
+      .json()
+      .then((tokens) => {
+        return tokens;
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  } else {
+    throw new Error(url + "\n\t" + result.status + ": " + result.statusText);
+  }
 }
