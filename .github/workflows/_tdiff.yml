@@ -10,7 +10,6 @@ on:
 jobs:
   generate-report:
     runs-on: ubuntu-latest
-    name: Generate token diff report
     steps:
       - run: echo "🎉 The '${{ github.workflow }}' was triggered by a ${{ github.event_name }} event."
       - run: echo "🔎 The name of your branch is ${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}} and your repository is ${{ github.repository }}."
