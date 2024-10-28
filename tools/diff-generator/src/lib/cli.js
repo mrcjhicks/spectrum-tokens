@@ -65,6 +65,7 @@ program
   .option("-gak, --githubAPIKey <key>", "github api key to use")
   .option("-f, --format <format>", "cli (default) or markdown")
   .option("-o, --output <path>", "file path to store diff output")
+  .option("-d, --debug <path>", "file path to store diff json")
   .action(async (options) => {
     try {
       if (options.githubAPIKey) {
@@ -75,8 +76,8 @@ program
       const [originalFile, updatedFile] = await determineFiles(options);
       const result = tokenDiff(originalFile, updatedFile);
       cliCheck(result, options);
-    } catch (e) {
-      console.error(cliFormatter.error("\n" + e + "\n"));
+    } catch (error) {
+      console.error(error);
     }
   });
 
@@ -167,20 +168,23 @@ function printReport(result, log, options) {
         reportFunction = log;
     }
 
-    reportFunction(new Date().toLocaleString());
+    if (options.debug) {
+      storeOutput(options.debug, JSON.stringify(result, null, 2));
+    }
 
+    reportFunction(new Date().toLocaleString());
     const exit = reportFormatter.printReport(result, reportFunction, options)
       ? 0
       : 1;
 
-    if (reportFunction !== log) {
+    if (reportFunction && reportFunction !== log) {
       const output = reportOutput.join("\n").replaceAll("\n\n", "\n");
       if (options.output) {
         storeOutput(options.output, output);
       } else {
         console.log(output);
       }
-    } else if (reportFunction === log && options.output) {
+    } else if (reportFunction && reportFunction === log && options.output) {
       console.log(
         red(
           "Need to specify a supported format to write the result to a file.",
@@ -190,9 +194,7 @@ function printReport(result, log, options) {
 
     return exit;
   } catch (error) {
-    console.log("\n");
-    console.log(error);
-    console.log("\n");
+    console.error(error);
 
     return console.error(
       cliFormatter.error(
