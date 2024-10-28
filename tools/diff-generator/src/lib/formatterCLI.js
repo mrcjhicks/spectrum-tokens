@@ -18,6 +18,8 @@ const red = chalk.hex("F37E7E");
 const green = chalk.hex("7EF383");
 const white = chalk.white;
 
+const EMOJI = false;
+
 export class CLIFormatter {
   get hilite() {
     return yellow;
@@ -141,7 +143,11 @@ export class CLIFormatter {
   printTitle(emojiName, title, numTokens, log, i = 0) {
     log(
       this.indent(
-        this.neutral(emoji.emojify(`:${emojiName}: ${title} (${numTokens})`)),
+        this.neutral(
+          EMOJI
+            ? emoji.emojify(`:${emojiName}: `)
+            : "" + `${title} (${numTokens})`,
+        ),
         i,
       ),
     );
