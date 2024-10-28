@@ -61,7 +61,7 @@
   },
   "black": {
     "$schema": "https://opensource.adobe.com/spectrum-tokens/schemas/token-types/color.json",
-    "value": "rgb(0, 0, 0)",
+    "value": "rgb(5, 5, 5)",
     "uuid": "28dea8b0-4e9a-46f9-babb-c8910e6ae783",
     "private": true
   },
