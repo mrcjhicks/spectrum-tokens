@@ -91,7 +91,9 @@ class MarkdownFormatter extends CLIFormatter {
   }
 
   printNewValue(path, value, log) {
-    log(this.indent(this.neutral(path.replace("sets.", "") + ": " + value), 3));
+    log(
+      this.indent(this.neutral(path.replaceAll("sets.", "") + ": " + value), 3),
+    );
   }
 
   printSchemaChange(path, orginal, updated, log) {
