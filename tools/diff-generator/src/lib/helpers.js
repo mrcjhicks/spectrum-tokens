@@ -13,8 +13,9 @@ governing permissions and limitations under the License.
 export function isObject(a) {
   return (
     !!a &&
-    a.constructor &&
-    (a.constructor === Object || a.constructor.name === "Object")
+    (typeof a === "object" ||
+      (a.constructor &&
+        (a.constructor === Object || a.constructor.name === "Object")))
   );
 }
 
@@ -28,4 +29,8 @@ export function isBoolean(a) {
 
 export function isNumber(a) {
   return typeof a === "number";
+}
+
+export function assert(condition, message) {
+  if (!condition) throw new Error(message ? message : undefined);
 }
