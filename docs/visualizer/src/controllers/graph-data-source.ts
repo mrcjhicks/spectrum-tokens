@@ -61,7 +61,7 @@ const CONFIG = CONFIG_FIGMA;
 ///////////////////////////////
 
 let USECSS:boolean = false;
-let USEFIGMA:boolean = false;
+let USEFIGMA:boolean = true;
 let USEBETA:boolean = false;
 
 switch( CONFIG ) {
@@ -259,10 +259,6 @@ export class GraphDataSource {
         });
       }
 
-      if (foundValues.length === 0) {
-        // console.warn('FAILED TO FIND VALUE FOR', nodeId, nodeData);
-      }
-
       // First, we add this BARE NODE to the graph
       // with no value or downstream adjaciencies...
       //
@@ -283,7 +279,8 @@ export class GraphDataSource {
       const rawValues: string[] = [];
       foundValues.forEach((foundValueItem) => {
         const valuePath = foundValueItem.path;
-        let foundValue = foundValueItem.value;
+        let foundValue = foundValueItem.value.toString();
+
         // is this found value a downstream adjacency?
         // if so, add it to the graph...
         if (
