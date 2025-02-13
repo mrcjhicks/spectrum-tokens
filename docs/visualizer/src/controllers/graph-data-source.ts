@@ -50,8 +50,43 @@ interface RawSpectrumTokenJson {
   [tokenIdentifier: string]: RawJsonItem;
 }
 
+///////////////////////////////
+
+const CONFIG_DEFAULT:string = 'default';
+const CONFIG_FIGMA:string = 'figma'; // s2, figma tokens
+const CONFIG_CSS:string = 'css'; //s1, css tokens
+
+const CONFIG = CONFIG_FIGMA;
+
+///////////////////////////////
+
+let USECSS:boolean = false;
+let USEFIGMA:boolean = false;
+let USEBETA:boolean = false;
+
+switch( CONFIG ) {
+  case CONFIG_FIGMA:
+    USEFIGMA = true;
+    USEBETA = true;
+    break;
+
+  case CONFIG_CSS:
+    USECSS = true;
+    USEBETA = false;
+    break;
+
+  case CONFIG_DEFAULT:
+  default:
+    break;
+}
+
+import CSS from '../css';
+import FIGMA from '../figma';
+
+///////////////////////////////
+
 const SOURCE_PATH =
-  "https://raw.githubusercontent.com/adobe/spectrum-tokens/main/packages/tokens/";
+  "https://raw.githubusercontent.com/adobe/spectrum-tokens/" + (USEBETA ? 'beta' : 'main') +  "/packages/tokens/";
 
 const MANIFEST_JSON = "manifest.json";
 
@@ -136,7 +171,7 @@ export class GraphDataSource {
       // register the component itself as a node
       // and add an adjacency from that component
       // to this node
-      if (nodeData.component) {
+      if (!USECSS && !USEFIGMA && nodeData.component) {
         // add the component node only if it does not yet exist
         if (results.hasNode(nodeData.component) === false) {
           results.createNode({
@@ -147,9 +182,49 @@ export class GraphDataSource {
           });
           this.listOfComponents.push(nodeData.component);
         }
-
+      
         // add the adjacency between the component and this node
         results.createAdjacency(nodeData.component, nodeId);
+      }
+
+      if( USECSS ) {
+        for( const component of Object.keys(CSS) ) {
+          if( CSS[<keyof typeof CSS>component].includes(nodeId) ) {
+          if (results.hasNode(component) === false) {
+            results.createNode({
+              type: "component",
+              id: component,
+              x: 0,
+              y: 0,
+            });
+            this.listOfComponents.push(component);
+          }
+        
+          // add the adjacency between the component and this node
+          results.createAdjacency(component, nodeId);
+          }
+        }
+      }
+
+      if( USEFIGMA ) {
+        for( const component of Object.keys(FIGMA) ) {
+          const figmaComponentDefinition = FIGMA[<keyof typeof FIGMA>component];
+          const ref = <keyof typeof figmaComponentDefinition> 'references';
+          if( figmaComponentDefinition && figmaComponentDefinition[ref] && Object.keys(figmaComponentDefinition[ref]).includes(nodeId) ) {
+          if (results.hasNode(component) === false) {
+            results.createNode({
+              type: "component",
+              id: component,
+              x: 0,
+              y: 0,
+            });
+            this.listOfComponents.push(component);
+          }
+        
+          // add the adjacency between the component and this node
+          results.createAdjacency(component, nodeId);
+          }
+        }
       }
 
       // use a data structure here to keep track
