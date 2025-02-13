@@ -33,6 +33,7 @@
     "@spectrum-web-components/theme": "^0.40.0",
     "@spectrum-web-components/toast": "^0.40.0",
     "@spectrum-web-components/tooltip": "^0.40.0",
+    "@spectrum-web-components/progress-circle": "^0.40.0",
     "lit": "^3.1.0"
   }
 }
